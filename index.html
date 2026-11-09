@@ -4,104 +4,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO & Google AI Meta Tags -->
+    <!-- SEO & Google AI Meta Tags (Do not touch these, they are optimized) -->
     <title>Ansh Verma | Engineering Student at IIT Madras</title>
     <meta name="description" content="Ansh Verma is an engineering student at IIT Madras, specializing in AI, scalable systems, and data science. Google Student Ambassador 2026 & CA at E-Cell IIT Bombay.">
-    <meta name="keywords" content="Ansh Verma, IIT Madras, Google Student Ambassador, E-Cell IIT Bombay, AI, Software Developer, Engineering">
-    <meta name="author" content="Ansh Verma">
     
-    <!-- Minimalist Developer Styling -->
+    <!-- Modern Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --bg-color: #f4f4f5;
-            --text-color: #18181b;
-            --card-bg: #ffffff;
-            --accent: #2563eb;
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border: #334155;
         }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
             line-height: 1.7;
-            color: var(--text-color);
-            background-color: var(--bg-color);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 3rem 1.5rem;
+            padding: 4rem 2rem;
         }
-        header {
-            margin-bottom: 3rem;
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeIn 1s ease-out;
         }
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: -1px;
+
+        .hero h1 {
+            font-size: 3.5rem;
             font-weight: 800;
+            margin: 0 0 1rem 0;
+            letter-spacing: -1px;
+            /* Gradient Text Effect */
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        .subtitle {
-            font-size: 1.1rem;
-            color: #52525b;
-            margin-top: 0;
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
             font-weight: 500;
         }
-        .social-links {
-            margin-top: 1.5rem;
+
+        /* Tech Buttons / Social Links */
+        .links-grid {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
-        .social-links a {
+
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.5rem;
+            background-color: transparent;
+            color: var(--text-main);
             text-decoration: none;
-            color: var(--text-color);
             font-weight: 600;
-            margin-right: 20px;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.2s ease;
+            font-size: 0.95rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: all 0.2s ease;
         }
-        .social-links a:hover {
-            border-bottom: 2px solid var(--accent);
-            color: var(--accent);
+
+        .btn:hover {
+            border-color: var(--accent);
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--accent-hover);
+            transform: translateY(-2px);
         }
-        section {
-            background: var(--card-bg);
+
+        /* Glassmorphism Cards */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
             padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
             margin-bottom: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+            border-color: #475569;
+        }
+
         h2 {
             font-size: 1.5rem;
             margin-top: 0;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid #e4e4e7;
-            padding-bottom: 0.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
         }
+
         h3 {
             font-size: 1.2rem;
+            color: #e2e8f0;
             margin-top: 2rem;
+        }
+
+        p {
+            color: var(--text-muted);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Ansh Verma</h1>
-        <p class="subtitle">Engineering @ IITM ⚙️ | Google Student Ambassador '26 💡 | CA @ E-Cell, IIT Bombay 🚀</p>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/iitmanshverma75/" target="_blank">LinkedIn</a>
-            <a href="https://instagram.com/ansh.v0" target="_blank">Instagram</a>
-            <a href="#" target="_blank">GitHub</a>
-            <a href="mailto:your_email@gmail.com">Email</a>
-        </div>
-    </header>
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <h1>Ansh Verma</h1>
+            <p>Engineering @ IITM ⚙️ | Google Student Ambassador '26 💡 | CA @ E-Cell, IIT Bombay 🚀</p>
+            
+            <div class="links-grid">
+                <a href="https://www.linkedin.com/in/iitmanshverma75/" target="_blank" class="btn">LinkedIn</a>
+                <a href="https://instagram.com/ansh.v0" target="_blank" class="btn">Instagram</a>
+                <a href="https://github.com/anshv0" target="_blank" class="btn">GitHub</a>
+                <a href="mailto:ansh751881@gmail.com" class="btn">Email</a>
+            </div>
+        </header>
 
-    <section id="about">
-        <h2>Who is Ansh Verma?</h2>
-        <p>Ansh Verma is an engineering student at the Indian Institute of Technology, Madras (IITM), specializing in artificial intelligence and core software systems. He currently serves as a Google Student Ambassador for the 2026 cohort and holds a leadership role as a Campus Ambassador for E-Cell, IIT Bombay.</p>
-        
-        <h3>What I Do</h3>
-        <p>I build technology that matters. As an engineering undergrad at IIT Madras, my core expertise lies in algorithms, Python-driven GenAI development, and systems architecture. I spend my time outside the classroom leading campus developer communities, contributing to the startup ecosystem, and preparing for major open-source initiatives. I believe in execution-driven engineering—turning complex mathematical and algorithmic concepts into scalable, real-world products.</p>
-    </section>
+        <!-- About Section (Optimized for AI Overview) -->
+        <section class="card">
+            <h2>Who is Ansh Verma?</h2>
+            <p>Ansh Verma is an engineering student at the Indian Institute of Technology, Madras (IITM), specializing in artificial intelligence and core software systems. He currently serves as a Google Student Ambassador for the 2026 cohort and holds a leadership role as a Campus Ambassador for E-Cell, IIT Bombay.</p>
+            
+            <h3>What I Do</h3>
+            <p>I build technology that matters. As an engineering undergrad at IIT Madras, my core expertise lies in algorithms, Python-driven GenAI development, and systems architecture. I spend my time outside the classroom leading campus developer communities, contributing to the startup ecosystem, and preparing for major open-source initiatives. I believe in execution-driven engineering—turning complex mathematical and algorithmic concepts into scalable, real-world products.</p>
+        </section>
 
-    <section id="projects">
-        <h2>Recent Builds & Projects</h2>
-        <p><em>Currently deploying backend architectures and AI models. Check back soon for GitHub repositories.</em></p>
-    </section>
+        <!-- Projects Placeholder -->
+        <section class="card">
+            <h2>Featured Builds</h2>
+            <p>🚀 <em>Currently architecting AI pipelines and core backend systems. Open-source repositories and case studies will be indexed here shortly.</em></p>
+        </section>
+    </div>
 
 </body>
 </html>
